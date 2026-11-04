@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katalog Buku | BookStore</title><link rel="stylesheet" href="style.css">
+<script src="data.js" defer></script><script src="app.js" defer></script></head>
+<body>
+<header><h1>BookStore</h1><nav><a href="dashboard.html">Dashboard</a><a class="active" href="stok.html">Katalog</a><a href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a></nav></header>
+<main class="container">
+  <h2>Informasi Stok / Katalog Buku</h2>
+  <p style="color:#718078;margin:8px 0 18px">Data buku ditampilkan dari array <b>dataKatalogBuku</b> pada file data.js.</p>
+  <div class="table-wrap"><table><thead><tr><th>ID</th><th>Judul Buku</th><th>Penulis</th><th>Kategori</th><th>Harga</th><th>Stok</th></tr></thead><tbody id="katalogBody"></tbody></table></div>
+  <h2 class="section-title">Tambah Stok Buku</h2>
+  <section class="card">
+    <form id="stokForm">
+      <div class="form-grid">
+        <div><label for="judulBuku">Judul Buku</label><input id="judulBuku" required></div>
+        <div><label for="penulisBuku">Penulis</label><input id="penulisBuku" required></div>
+        <div><label for="kategoriBuku">Kategori</label><input id="kategoriBuku" required></div>
+        <div><label for="hargaBuku">Harga (Rp)</label><input id="hargaBuku" type="number" min="1" required></div>
+        <div><label for="stokBuku">Jumlah Stok</label><input id="stokBuku" type="number" min="0" required></div>
+      </div>
+      <div class="actions"><button type="submit">Tambah Buku</button></div>
+    </form>
+  </section>
+</main><footer>© 2026 BookStore</footer></body></html>

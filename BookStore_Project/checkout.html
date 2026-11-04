@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pemesanan | BookStore</title><link rel="stylesheet" href="style.css">
+<script src="data.js" defer></script><script src="app.js" defer></script></head>
+<body>
+<header><h1>BookStore</h1><nav><a href="dashboard.html">Dashboard</a><a href="stok.html">Katalog</a><a class="active" href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a></nav></header>
+<main class="container">
+  <h2>Halaman Pemesanan / Checkout</h2>
+  <p style="color:#718078;margin:8px 0 18px">Isi informasi pemesan, pilih buku, lalu simpan pesanan.</p>
+  <section class="card">
+    <form id="checkoutForm">
+      <div class="form-grid">
+        <div><label for="namaPemesan">Nama Pemesan</label><input id="namaPemesan" required></div>
+        <div><label for="emailPemesan">Email</label><input id="emailPemesan" type="email" required></div>
+        <div><label for="alamatPemesan">Alamat Pengiriman</label><textarea id="alamatPemesan" required></textarea></div>
+        <div><label for="pilihBuku">Pilih Buku</label><select id="pilihBuku" required></select></div>
+        <div><label for="jumlahBeli">Jumlah</label><input id="jumlahBeli" type="number" min="1" value="1" required></div>
+        <div><label for="ekspedisi">Ekspedisi</label><select id="ekspedisi"><option>JNE</option><option>SiCepat</option><option>J&T</option><option>Pos Indonesia</option></select></div>
+        <div><label for="jenisPaket">Jenis Paket</label><select id="jenisPaket"><option>Reguler</option><option>Express</option><option>Same Day</option></select></div>
+        <div><label for="pembayaran">Metode Pembayaran</label><select id="pembayaran"><option>Transfer Bank</option><option>COD</option><option>E-Wallet</option></select></div>
+      </div>
+      <p id="hargaCheckout" style="font-weight:bold;color:#245b4a">Total: Rp0</p>
+      <div class="actions"><button type="submit">Simpan Pesanan</button><button class="secondary" type="button" id="ubahPesanan">Ubah Pesanan Terakhir</button></div>
+    </form>
+  </section>
+  <h2 class="section-title">Daftar Pesanan</h2>
+  <div class="table-wrap"><table><thead><tr><th>No. DO</th><th>Nama</th><th>Buku</th><th>Jumlah</th><th>Total</th><th>Ekspedisi</th></tr></thead><tbody id="pesananBody"></tbody></table></div>
+</main><footer>© 2026 BookStore</footer></body></html>

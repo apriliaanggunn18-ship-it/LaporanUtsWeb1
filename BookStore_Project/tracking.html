@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracking | BookStore</title><link rel="stylesheet" href="style.css">
+<script src="data.js" defer></script><script src="app.js" defer></script></head>
+<body>
+<header><h1>BookStore</h1><nav><a href="dashboard.html">Dashboard</a><a href="stok.html">Katalog</a><a href="checkout.html">Pemesanan</a><a class="active" href="tracking.html">Tracking</a></nav></header>
+<main class="container">
+  <h2>Tracking Pengiriman</h2>
+  <p style="color:#718078;margin:8px 0 18px">Masukkan nomor Delivery Order untuk melihat informasi pengiriman.</p>
+  <section class="card">
+    <form id="trackingForm">
+      <div><label for="nomorDO">Nomor Delivery Order</label><input id="nomorDO" placeholder="Contoh: DO202611001" required></div>
+      <div class="actions"><button type="submit">Cari</button></div>
+    </form>
+  </section>
+  <section id="hasilTracking" class="card" style="display:none;margin-top:20px"></section>
+</main><footer>© 2026 BookStore</footer></body></html>
